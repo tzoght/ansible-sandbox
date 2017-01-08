@@ -1,2 +1,3 @@
-_venv_
-vm/.vagrant
+
+**/.vagrant
+**/_venv_
