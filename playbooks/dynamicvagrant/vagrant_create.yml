@@ -1,3 +1,4 @@
+# Checkout group_by: http://docs.ansible.com/ansible/group_by_module.html
 ---
 - name: Provision a vagrant machine
   hosts: localhost
