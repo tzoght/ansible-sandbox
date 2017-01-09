@@ -1,6 +1,6 @@
 #!/bin/sh
-mkdir -p _venv_
-cd _venv_
+mkdir -p _v_basicnginx
+cd _v_basicnginx
 sudo pip install virtualenv
 virtualenv .
 source bin/activate
