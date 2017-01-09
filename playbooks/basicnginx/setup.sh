@@ -4,6 +4,7 @@ cd _v_basicnginx
 sudo pip install virtualenv
 virtualenv .
 source bin/activate
+pip install ansible
 pip install boto
 pip install docker-py
 cd ..
