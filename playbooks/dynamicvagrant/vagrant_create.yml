@@ -1,0 +1,25 @@
+---
+- name: Provision a vagrant machine
+  hosts: localhost
+  vars:
+    box: ubuntu/trusty64
+  tasks:
+    - name: create a Vagrantfile
+      command: vagrant init {{ box }} creates=Vagrantfile
+
+    - name: Bring up a vagrant server
+      command: vagrant up
+
+    - name: add the Vagrant hosts to the inventory
+      add_host: >
+            name=vagrant
+            ansible_ssh_host=127.0.0.1
+            ansible_ssh_port=2222
+            ansible_ssh_user=vagrant
+
+- name: Do something to the vagrant machine
+  hosts: vagrant
+  sudo: yes
+  tasks:
+    - name: install nginx
+      apt: name=nginx update_cache=yes
